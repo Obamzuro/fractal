@@ -6,7 +6,7 @@
 /*   By: mpopovyc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/04 19:46:36 by mpopovyc          #+#    #+#             */
-/*   Updated: 2018/06/04 19:46:39 by mpopovyc         ###   ########.fr       */
+/*   Updated: 2018/10/01 14:17:28 by obamzuro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void		read_source(t_cl *cl)
 	char	buff[1001];
 
 	cl->line = strdup("");
-	if ((fd = open("main/fractals.cl", O_RDONLY)) == -1)
+	if ((fd = open("srcs/fractals.cl", O_RDONLY)) == -1)
 	{
 		perror(buff);
 		return ;

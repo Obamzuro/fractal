@@ -6,7 +6,7 @@
 #    By: rnovodra <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/10/28 17:00:59 by rnovodra          #+#    #+#              #
-#    Updated: 2018/05/05 15:16:41 by mpopovyc         ###   ########.fr        #
+#    Updated: 2018/10/01 14:16:55 by obamzuro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 
 NAME = fractol
 
-MAIN = $(addprefix main/, main.c ft_putpixel.c key_hookie.c mlx_initiation.c \
+MAIN = $(addprefix srcs/, main.c ft_putpixel.c key_hookie.c mlx_initiation.c \
 		create_strctr.c key_hook.c clear_window.c mouse_hook.c draw_fract.c \
 		settings.c opencl_initiation.c read_source.c legend.c usage.c)
 
@@ -28,7 +28,7 @@ HEADER = ./inc/fractol.h
 
 all : $(NAME)
 
-$(NAME) : $(MAIN) $(HEADER)
+$(NAME) : $(OBJ) $(HEADER)
 	make -C libft/
 	gcc $(FLAGS) $(FLAGS_MLX) -L libft/ -lft -I ./inc $(MAIN) -o $(NAME)
 
